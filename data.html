@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ > -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+    <style>
+
+      .blue { color: #185875; }
+
+      .container td tr th{
+        text-align: center;
+      }
+
+      .container th h1 {
+          font-weight: bold;
+          font-size: 1em;
+          text-align: center;
+          color: #185875;
+      }
+
+      .container td {
+          font-weight: normal;
+          font-size: 1em;
+        -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+           -moz-box-shadow: 0 2px 2px -2px #0E1119;
+                box-shadow: 0 2px 2px -2px #0E1119;
+      }
+
+      .container {
+        text-align: center;
+        overflow: auto;
+        width: 1700px;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        padding: 0 0 8em 0;
+        color: black;
+      }
+
+      .container td, .container th {
+          padding-bottom: 2%;
+          padding-top: 2%;
+        padding-left:2%;
+        padding-right:2%;  
+        border-right: 2px solid #30303d;
+                border-bottom: 2px solid #30303d;
+        word-wrap: break-word;
+      }
+
+      /* Background-color of the odd rows */
+      .container tr:nth-child(odd) {
+          background-color: #acb0b6;
+      }
+
+      /* Background-color of the even rows */
+      .container tr:nth-child(even) {
+          background-color: #ddd6d8;
+      }
+
+      .container th {
+          background-color: #597288;
+          color: #E0E0E0;
+      }
+
+      .event_id {
+        width: 8%;
+      }
+      .game_session {
+        width: 8%;
+      }
+      .timestamp {
+        width: 10%;
+      }
+      .event_data {
+        width: 18%;
+      }
+      .installation_id {
+        width: 8%;
+      }
+      .event_count {
+        width: 8%;
+      }
+      .event_code {
+        width: 8%;
+      }
+      .game_time {
+        width: 8%;
+      }
+      .tile {
+        width: 10%;
+      }
+      .type {
+        width: 8%;
+      }
+      .world {
+        width: 8%;
+      }
+
+
+      .game_session2 {
+        width: 15%;
+      }
+      .installation_id2 {
+        width: 15%;
+      }
+      .num_correct {
+        width: 10%;
+      }
+      .num_incorrect {
+        width: 15%;
+      }
+      .accuracy {
+        width: 10%;
+      }
+      .accuracy_group {
+        width: 15%;
+      }
+      .title2 {
+        width: 20%;
+      }
+
+    </style>
+
+  </head>
+  <body style="background-color: grey">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+
+      <a class="navbar-brand" href="#">CS539 Final Project</a>
+
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Project Description</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="data.html">Project Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="models.html">Project Models</a>
+        </li>
+
+      </ul>
+    </nav>
+    <br>
+    <br>
+
+    <div class="jumbotron" style="text-align: center; background-color: #ddd"">
+      <h1>Project Data</h1>
+    </div>
+
+    <div class="alert alert-dark">
+      <h2 style="text-align: center">Data Description</h2>
+      <h4>The training data given to us was split between two files, one that was going to look exactly like the test file, and another containing the labels and some more information. The information combining the two files was the installation_id. In the training labels folder there were thousands of rows containing an instalation_id, game_session and some information on how well they did on that given assessment. PBS wanted us to predict the accuracy group of the last assessment for each installation_id; this is why multiple rows can share the same installation_id in the training_labels file. Below are tables representing each file with the first 100 entries of data.
+      </h4>
+      <br>
+      <h4>In the training_labels file there is a lot of data that was given that is not given in the test file. This includes the number of correct answers, incorrect answers, accuracy, and the title of the assignment. This data could have possibly been used if we had thought a regression model on accuracy would be better, but we only cared about the accuracy group so we threw out all that other information as we could not use it on the test data. 
+      </h4>
+      <br>
+      <h4>The training and test files contained almost exactly the same data. They contained the same columns, but held different information in the rows. The train and test file contained clickstream data, so each row in the csv contained information on action that the player made in the game. The data we eventually decided to use in each action was the game_session, time_stamp, installation_id, event_count, event_code, type, and world. Game_session and installation ids were the identifiers, time_stamps were used to organize data into training sets and the rest of the information was used for predictions and training. Type is the type of thing the person was playing on the app like an activity or game, event_count was which number action it was that the player made, event_code was something that described what the user did, and world was one of the major sections the user was playing in. The only difference between the test and training file was the fact the the test file did contained only the start code for the last assessment the user took, while training contained all the clickstream information for each assessment. 
+      </h4>
+    </div>
+
+    
+
+
+    <div class="col-sm-12">
+      <h3 style="text-align: center">Train.csv Example</h3>
+      <div class="col-sm-12" id="train" style="overflow: auto; height: 500px; width: 100%;">
+
+      </div>
+      <h3 style="text-align: center">Train_Labeles.csv Example</h3>
+      <div class="col-sm-12" id="trainLabels" style="overflow: auto; height: 500px">
+
+      </div>
+      <h3 style="text-align: center">Test.csv Example</h3>
+      <div class="col-sm-12" id="test" style="overflow: auto; height: 500px">
+
+      </div>
+    </div>
+
+
+    <script>
+
+      d3.csv("trainExamples.csv", function(data) {
+        console.log(data)
+
+        createTrain(data, "train");
+      });
+
+      d3.csv("trainLabelsExamples.csv", function(data) {
+        console.log(data)
+
+        createTrainLabels(data);
+      });
+
+      d3.csv("testExamples.csv", function(data) {
+        console.log(data)
+
+        createTrain(data, "test");
+      });
+
+
+      function createTrainLabels(info){
+
+
+        var tableRef = document.getElementById("trainLabels");
+        tableRef.innerHTML = "";
+      
+        var table = document.createElement("TABLE");
+        table.setAttribute('class', 'container');
+        tableRef.appendChild(table)
+
+
+        var header = table.appendChild(document.createElement('thead'))
+        header.setAttribute('style', 'text-align: center');
+        var row = header.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        var cell7 = row.insertCell(6);
+
+        cell1.outerHTML = "<th class=\"game_session2\" style=\"text-align: center\">game_session</th>";
+        cell2.outerHTML = "<th class=\"installation_id2\" style=\"text-align: center\">installation_id</th>";
+        cell3.outerHTML = "<th class=\"title2\" style=\"text-align: center\">title</th>";
+        cell4.outerHTML = "<th class=\"num_correct\" style=\"text-align: center\">num_correct</th>";
+        cell5.outerHTML = "<th class=\"num_incorrect\" style=\"text-align: center\">num_incorrect</th>";
+        cell6.outerHTML = "<th class=\"accuracy\" style=\"text-align: center\">accuracy</th>";
+        cell7.outerHTML = "<th class=\"accuracy_group\" style=\"text-align: center\">accuracy_group</th>";
+
+
+
+        for(var i = 0; i < info.length; i+=1){
+          var newRow = table.insertRow(-1);
+          console.log(i)
+
+          var newCell1 = newRow.insertCell(0);
+          var newCell2 = newRow.insertCell(1);
+          var newCell3 = newRow.insertCell(2);
+          var newCell4 = newRow.insertCell(3);
+          var newCell5 = newRow.insertCell(4);
+          var newCell6 = newRow.insertCell(5);
+          var newCell7 = newRow.insertCell(6);
+
+
+          var newText1 = document.createTextNode(info[i].game_session);
+          var newText2 = document.createTextNode(info[i].installation_id);
+          var newText3 = document.createTextNode(info[i].title);
+          var newText4 = document.createTextNode(info[i].num_correct);
+          var newText5 = document.createTextNode(info[i].num_incorrect);
+          var newText6 = document.createTextNode(info[i].accuracy);
+          var newText7 = document.createTextNode(info[i].accuracy_group);
+
+
+
+          newCell1.appendChild(newText1);
+          newCell2.appendChild(newText2);
+          newCell3.appendChild(newText3);
+          newCell4.appendChild(newText4);
+          newCell5.appendChild(newText5);
+          newCell6.appendChild(newText6);
+          newCell7.appendChild(newText7);
+        
+        } 
+      }
+
+      function createTrain(info, elem){
+
+
+        var tableRef = document.getElementById(elem);
+        tableRef.innerHTML = "";
+      
+        var table = document.createElement("TABLE");
+        table.setAttribute('class', 'container');
+        tableRef.appendChild(table)
+
+
+        var header = table.appendChild(document.createElement('thead'))
+        header.setAttribute('style', 'text-align: center');
+        var row = header.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        var cell7 = row.insertCell(6);
+        var cell8 = row.insertCell(7);
+        var cell9 = row.insertCell(8);
+        var cell10 = row.insertCell(9);
+        var cell11 = row.insertCell(10);
+        cell1.outerHTML = "<th class=\"event_id\" style=\"text-align: center\">event_id</th>";
+        cell2.outerHTML = "<th class=\"game_session\" style=\"text-align: center\">game_session</th>";
+        cell3.outerHTML = "<th class=\"timestamp\" style=\"text-align: center\">timestamp</th>";
+        cell4.outerHTML = "<th class=\"event_data\" style=\"text-align: center\">event_data</th>";
+        cell5.outerHTML = "<th class=\"installation_id\" style=\"text-align: center\">installation_id</th>";
+        cell6.outerHTML = "<th class=\"event_count\" style=\"text-align: center\">event_count</th>";
+        cell7.outerHTML = "<th class=\"event_code\" style=\"text-align: center\">event_code</th>";
+        cell8.outerHTML = "<th class=\"game_time\" style=\"text-align: center\">game_time</th>";
+        cell9.outerHTML = "<th class=\"title\" style=\"text-align: center\">title</th>";
+        cell10.outerHTML = "<th class=\"type\" style=\"text-align: center\">type</th>";
+        cell11.outerHTML = "<th class=\"world\" style=\"text-align: center\">world</th>";
+
+
+
+        for(var i = 0; i < info.length; i+=1){
+          var newRow = table.insertRow(-1);
+          console.log(i)
+
+          var newCell1 = newRow.insertCell(0);
+          var newCell2 = newRow.insertCell(1);
+          var newCell3 = newRow.insertCell(2);
+          var newCell4 = newRow.insertCell(3);
+          var newCell5 = newRow.insertCell(4);
+          var newCell6 = newRow.insertCell(5);
+          var newCell7 = newRow.insertCell(6);
+          var newCell8 = newRow.insertCell(7);
+          var newCell9 = newRow.insertCell(8);
+          var newCell10 = newRow.insertCell(9);
+          var newCell11 = newRow.insertCell(10);
+
+
+          var newText1 = document.createTextNode(info[i].event_id);
+          var newText2 = document.createTextNode(info[i].game_session);
+          var newText3 = document.createTextNode(info[i].timestamp);
+          var newText4 = document.createTextNode(info[i].event_data);
+          var newText5 = document.createTextNode(info[i].installation_id);
+          var newText6 = document.createTextNode(info[i].event_count);
+          var newText7 = document.createTextNode(info[i].event_code);
+          var newText8 = document.createTextNode(info[i].game_time);
+          var newText9 = document.createTextNode(info[i].title);
+          var newText10 = document.createTextNode(info[i].type);
+          var newText11 = document.createTextNode(info[i].world);
+
+
+          newCell1.appendChild(newText1);
+          newCell2.appendChild(newText2);
+          newCell3.appendChild(newText3);
+          newCell4.appendChild(newText4);
+          newCell5.appendChild(newText5);
+          newCell6.appendChild(newText6);
+          newCell7.appendChild(newText7);
+          newCell8.appendChild(newText8);
+          newCell9.appendChild(newText9);
+          newCell10.appendChild(newText10);
+          newCell11.appendChild(newText11);
+        
+        } 
+      }
+
+    </script>
+
+  </body>
+</html>

@@ -1,6 +1,9 @@
 Jason Abel  
+
 Megan Deloach
+
 Jack Gonsalves
+
 Tai Zhou
 
 https://jabel3141.github.io/CS539-Final-Project/

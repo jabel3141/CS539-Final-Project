@@ -6,12 +6,8 @@ Tai Zhou
 https://jabel3141.github.io/CS539-Final-Project/
 
 
-
 Github Repo:
 https://github.com/jabel3141/CS539-Final-Project
-
-
-This Project shows a redesigned website for the Billiards University Exam. It allows people to take both parts of the exam and see their statistics based on how they do.
 
 
 ## Project Description
@@ -21,6 +17,7 @@ The goal of this project was to analyze clickstream data from the PBS KIDS Measu
 ## Project Data
 
 The project data can be found at this kaggle webpage: https://www.kaggle.com/c/data-science-bowl-2019/data
+
 The data in this repo is a small sample of the overall data.
 
 The training data given to us was split between two files, one that was going to look exactly like the test file, and another containing the labels and some more information. The information combining the two files was the installation_id. In the training labels folder there were thousands of rows containing an instalation_id, game_session and some information on how well they did on that given assessment. PBS wanted us to predict the accuracy group of the last assessment for each installation_id; this is why multiple rows can share the same installation_id in the training_labels file. Below are tables representing each file with the first 100 entries of data.
@@ -31,5 +28,17 @@ The training and test files contained almost exactly the same data. They contain
 
 
 ## Project Models:
-We used multiple models. How to download and run each model individually are on the website under each model
+We used multiple models which are descripbed in the website. How to download and run each model individually are on the website under each model
+
+
+## Python Libraries needed
+- Pandas
+- Keras
+- Pickle
+- SciKitLearn
+- Numpy
+- pyTorch
+- Tensorflow
+- more_itertools
+- Warnings
 

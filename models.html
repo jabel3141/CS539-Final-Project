@@ -163,17 +163,17 @@
     </div>
 
     <div class="col-sm-12">
-      <h1 style="text-align: center">Parsing Style 1 (Megan)</h1>
+      <h1 style="text-align: center">Parsing Style 1</h1>
 
       <div class="row">
         <div class="col-sm">
           <div class="alert alert-dark">
             <h4 style="text-align: center">Model Info</h4>
             <ul class="list-group">
-              <li class="list-group-item">Any game data played prior to a given assessment is given the same accuracy group as the assessment</li>
-              <li class="list-group-item">Aggregated by group number where a group number represents all assessment data with the game data played prior to that given assessment</li>
-              <li class="list-group-item">Logistic Regression, K-Nearest Neighbors, Support Vector Machine</li>
-
+              <li class="list-group-item">Reduced features to 12 per game session</li>
+              <li class="list-group-item">Neural Network from MNIST examples</li>
+              <li class="list-group-item">2 Layer with 12 neruons and 4 output values</li>
+              <li class="list-group-item">Batch  size of 50 and 30 epochs</li>
             </ul>
 
           </div>
@@ -183,10 +183,7 @@
           <div class="alert alert-dark">
             <h4 style="text-align: center">Results</h4>
             <ul class="list-group">
-              <li class="list-group-item">Logistic Regression: ~47.5% with most predictions being either 0 or 3</li>
-              <li class="list-group-item">K-Nearest Neighbors: ~50% with most predictions being 3</li>
-              <li class="list-group-item">Support Vector Machine: ~50% with most prediciton being 3</li>
-
+              <li class="list-group-item">CNN: 17% Accuracy</li>
             </ul>
 
           </div>
@@ -203,8 +200,7 @@
           <div class="alert alert-dark">
             <h4 style="text-align: center">Downlaod</h4>
             <ul class="list-group">
-              <li class="list-group-item">First download and run the <a href="PickleFileCreation.py" download>PickleFileCreation.py</a> file</li>
-              <li class="list-group-item">Then download and run the <a href="Logistic_KNN_SVM.py" download>Logistic_KNN_SVM.py</a> file</li>
+              <li class="list-group-item">First download and run the <a href="MINSTCNN.py" download>MINSTCNN.py</a> file</li>
             </ul>
 
           </div>
@@ -259,7 +255,7 @@
           <div class="alert alert-dark">
             <h4 style="text-align: center">Downlaod</h4>
             <ul class="list-group">
-              <li class="list-group-item">Download and run the <a href="cnn.py" download>CNN.py</a> file</li>
+              <li class="list-group-item">Download and run the <a href="cnn.py" download>CNN.py</a> file. This has the CNN as well as SVM, KNN, and Random Forest.</li>
             </ul>
 
           </div>
@@ -271,16 +267,16 @@
     </div>
 
     <div class="col-sm-12">
-      <h1 style="text-align: center">Parsing Style 3 (Tai)</h1>
+      <h1 style="text-align: center">Parsing Style 3</h1>
 
       <div class="row">
         <div class="col-sm">
           <div class="alert alert-dark">
             <h4 style="text-align: center">Model Info</h4>
             <ul class="list-group">
-              <li class="list-group-item">Any game data played prior to a given assessment is given the same accuracy group as the assessment</li>
-              <li class="list-group-item">Aggregated by group number where a group number represents all assessment data with the game data played prior to that given assessment</li>
-              <li class="list-group-item">Logistic Regression, K-Nearest Neighbors, Support Vector Machine</li>
+              <li class="list-group-item">Used only assessment data and combined and sorted event_id by timestamp</li>
+              <li class="list-group-item">Limited length of a sequence to 400 steps. Appended 0000 sequences to match those with less than 400 steps</li>
+              <li class="list-group-item">Sequential Neural Network with 5 epochs</li>
 
             </ul>
 
@@ -291,10 +287,7 @@
           <div class="alert alert-dark">
             <h4 style="text-align: center">Results</h4>
             <ul class="list-group">
-              <li class="list-group-item">Logistic Regression: ~47.5% with most predictions being either 0 or 3</li>
-              <li class="list-group-item">K-Nearest Neighbors: ~50% with most predictions being 3</li>
-              <li class="list-group-item">Support Vector Machine: ~50% with most prediciton being 3</li>
-
+              <li class="list-group-item">Sequential Neural Network: ~98% while only using assessment data</li>
             </ul>
 
           </div>
@@ -302,8 +295,9 @@
       </div>
       <div class="row">
         <div class="col-sm">
-          <div class="alert alert-dark">
-            <img src="img/kids.png" class="rounded" alt="kids" style="width: 200px;">
+          <div class="alert alert-dark" style="text-align: center">
+            <img src="img/snnAssessment.png" class="rounded" alt="snnAssessment" style="width: 300px;">
+            <img src="img/snnLoss.png" class="rounded" alt="snnLoss" style="width: 300px;">
           </div>
         </div>
 
@@ -311,8 +305,7 @@
           <div class="alert alert-dark">
             <h4 style="text-align: center">Downlaod</h4>
             <ul class="list-group">
-              <li class="list-group-item">First download and run the <a href="PickleFileCreation.py" download>PickleFileCreation.py</a> file</li>
-              <li class="list-group-item">Then download and run the <a href="Logistic_KNN_SVM.py" download>Logistic_KNN_SVM.py</a> file</li>
+              <li class="list-group-item">First download the <a href="kaggleSubmissionFile.ipynb" download>kaggleSubmissionFile.ipynb</a> file. Then run on kaggle competition page. To run the file not for submission, you will just need to change how the program is reading in the in put data for the training, testing and train_labels.</li>
             </ul>
 
           </div>

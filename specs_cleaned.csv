@@ -1,387 +1,387 @@
-event_id,info
-2b9272f4,"['game_time', 'round', 'level', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-df4fe8b6,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-3babcb9b,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-7f0836bf,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-ab3136ba,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-bbfe0445,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-bc8f2793,"['game_time', 'round', 'coordinates', 'destination', 'duration', 'table_weights', 'weights', 'event_count', 'event_code']"
-33505eae,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-cdd22e43,"['game_time', 'object', 'layout', 'coordinates', 'duration', 'source', 'event_count', 'event_code']"
-d88e8f25,"['game_time', 'round', 'level', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-119b5b02,"['game_time', 'round', 'dwell_time', 'object', 'event_count', 'event_code']"
-4b5efe37,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-15f99afc,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-3d63345e,"['game_time', 'crystal_id', 'weight', 'coordinates', 'duration', 'source', 'crystals', 'event_count', 'event_code']"
-47026d5f,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-93edfe2e,"['game_time', 'round', 'target_size', 'object_type', 'resources', 'event_count', 'event_code']"
-795e4a37,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-56817e2b,"['game_time', 'round', 'duration', 'misses', 'event_count', 'event_code']"
-a1e4395d,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-3afde5dd,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-ecc6157f,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-b7dc8128,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-99abe2bb,"['game_time', 'round', 'movie_id', 'duration', 'description', 'event_count', 'event_code']"
-c277e121,"['game_time', 'round', 'media_type', 'total_duration', 'description', 'identifier', 'event_count', 'event_code']"
-6043a2b4,"['game_time', 'round', 'dinosaurs', 'houses', 'dinosaurs_placed', 'event_count', 'event_code']"
-28520915,"['game_time', 'misses', 'prompt', 'mode', 'round_number', 'event_count', 'duration', 'event_code']"
-1cf54632,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-3dfd4aa4,"['game_time', 'event_count', 'event_code']"
-e720d930,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-3ddc79c3,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-1375ccb7,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-8fee50e2,"['game_time', 'hat', 'destination', 'coordinates', 'correct', 'hats', 'duration', 'hats_placed', 'source', 'event_count', 'event_code']"
-bcceccc6,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-d02b7a8e,"['game_time', 'round', 'dinosaur', 'size', 'dinosaurs', 'coordinates', 'duration', 'event_count', 'event_code']"
-7fd1ac25,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-30614231,"['game_time', 'bucket', 'destination', 'coordinates', 'cauldron', 'buckets', 'buckets_placed', 'correct', 'source', 'duration', 'event_count', 'event_code']"
-3d8c61b0,"['game_time', 'round', 'source', 'has_toy', 'bowl_id', 'scale_contents', 'position', 'coordinates', 'event_count', 'event_code']"
-a8cc6fec,"['game_time', 'session_duration', 'exit_type', 'event_count', 'event_code']"
-363d3849,"['game_time', 'round', 'media_type', 'total_duration', 'description', 'identifier', 'event_count', 'event_code']"
-a8efe47b,"['game_time', 'weight', 'pillars', 'coordinates', 'left', 'right', 'source', 'event_count', 'event_code']"
-923afab1,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-65a38bf7,"['game_time', 'crystals', 'event_count', 'event_code']"
-461eace6,"['game_time', 'gate', 'layout', 'coordinates', 'event_count', 'event_code']"
-5dc079d8,"['game_time', 'round', 'level', 'dwell_time', 'object', 'event_count', 'event_code']"
-53c6e11a,"['game_time', 'round', 'duration', 'tutorial_step', 'event_count', 'event_code']"
-160654fd,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-5f0eb72c,"['game_time', 'height', 'destination', 'stumps', 'correct', 'source', 'duration', 'coordinates', 'event_count', 'event_code']"
-56bcd38d,"['game_time', 'object', 'layout', 'coordinates', 'source', 'event_count', 'event_code']"
-ea296733,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-67439901,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-71fe8f75,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-d122731b,"['game_time', 'correct', 'left', 'right', 'event_count', 'event_code']"
-709b1251,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-a5e9da97,"['game_time', 'round', 'scale_weights', 'target_weight', 'table_weights', 'correct', 'event_count', 'event_code']"
-5859dfb6,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-a29c5338,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-05ad839b,"['game_time', 'round', 'scale_contents', 'resources', 'event_count', 'event_code']"
-26a5a3dd,"['game_time', 'round', 'dwell_time', 'object', 'event_count', 'event_code']"
-e04fb33d,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-28a4eb9a,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-b1d5101d,"['game_time', 'round', 'event_count', 'event_code']"
-ea321fb1,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-4d911100,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-0db6d71d,"['game_time', 'weight', 'destination', 'coordinates', 'correct', 'pillars', 'duration', 'left', 'right', 'source', 'event_count', 'event_code']"
-7423acbc,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-736f9581,"['game_time', 'layout', 'event_count', 'event_code']"
-0d1da71f,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-f7e47413,"['game_time', 'round', 'level', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-e57dd7af,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-3dcdda7f,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-45d01abe,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-6f4adc4b,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-91561152,"['bucket', 'buckets_placed', 'target_bucket', 'coordinates', 'correct', 'prompt', 'game_time', 'event_count', 'event_code']"
-9554a50b,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-37937459,"['game_time', 'castles_placed', 'molds', 'event_count', 'event_code']"
-08fd73f3,"['game_time', 'round', 'level', 'duration', 'round_target', 'misses', 'event_count', 'event_code']"
-6c930e6e,"['game_time', 'duration', 'misses', 'event_count', 'event_code']"
-1325467d,"['game_time', 'coordinates', 'event_count', 'event_code']"
-2c4e6db0,"['game_time', 'round', 'houses', 'dinosaurs', 'event_count', 'event_code']"
-c7f7f0e1,"['game_time', 'version', 'event_count', 'event_code']"
-792530f8,"['game_time', 'round', 'shell_size', 'position', 'coordinates', 'event_count', 'event_code']"
-14de4c5d,"['game_time', 'round', 'distance', 'target_distances', 'correct', 'event_count', 'event_code']"
-532a2afb,"['game_time', 'buckets', 'target_bucket', 'mode', 'prompt', 'round_number', 'event_count', 'event_code']"
-5348fd84,"['game_time', 'bucket', 'coordinates', 'buckets', 'buckets_placed', 'source', 'duration', 'event_count', 'event_code']"
-b74258a0,"['game_time', 'duration', 'misses', 'left', 'right', 'event_count', 'event_code']"
-8af75982,"['game_time', 'round', 'source', 'bowl_id', 'position', 'scale_contents', 'correct', 'coordinates', 'event_count', 'event_code']"
-37c53127,"['game_time', 'round', 'level', 'duration', 'misses', 'event_count', 'event_code']"
-04df9b66,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-363c86c9,"['game_time', 'source', 'coordinates', 'duration', 'event_count', 'event_code']"
-cf7638f3,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-28f975ea,"['game_time', 'round', 'distance', 'dinosaur', 'target_distances', 'correct', 'event_count', 'event_code']"
-6aeafed4,"['game_time', 'round', 'target_containers', 'resources', 'container_type', 'event_count', 'event_code']"
-d3268efa,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-a7640a16,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-bd612267,"['game_time', 'coordinates', 'event_count', 'event_code']"
-ecaab346,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-6f8106d9,"['game_time', 'round', 'shells', 'holes', 'holding_shell', 'has_water', 'event_count', 'event_code']"
-c0415e5c,"['game_time', 'round', 'size', 'dinosaur', 'water_level', 'correct', 'coordinates', 'event_count', 'event_code']"
-b120f2ac,"['game_time', 'round', 'houses', 'dinosaurs', 'dinosaurs_placed', 'event_count', 'event_code']"
-e9c52111,"['game_time', 'round', 'jar', 'duration', 'event_count', 'event_code']"
-15a43e5b,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-dcaede90,"['game_time', 'round', 'level', 'event_count', 'event_code']"
-e5c9df6f,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-77c76bc5,"['game_time', 'buckets', 'buckets_placed', 'event_count', 'event_code']"
-f5b8c21a,"['game_time', 'round', 'duration', 'misses', 'event_count', 'event_code']"
-86ba578b,"['game_time', 'round', 'duration', 'event_count', 'event_code']"
-f3cd5473,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-df4940d3,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-71e712d8,"['game_time', 'duration', 'event_count', 'event_code']"
-2230fab4,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-c51d8688,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-1b54d27f,"['game_time', 'session_duration', 'exit_type', 'event_count', 'event_code']"
-abc5811c,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-77ead60d,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-16667cc5,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-c58186bf,"['game_time', 'size', 'coordinates', 'duration', 'event_count', 'event_code']"
-7372e1a5,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-2dcad279,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-a8a78786,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-bdf49a58,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-5c2f29ca,"['game_time', 'crystal_id', 'weight', 'coordinates', 'side', 'left', 'duration', 'right', 'crystals', 'source', 'event_count', 'event_code']"
-84538528,"['game_time', 'size', 'castles_placed', 'duration', 'coordinates', 'event_count', 'event_code']"
-a52b92d5,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-9b4001e4,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-3afb49e6,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-3bb91dda,"['game_time', 'round', 'containers', 'correct', 'target_containers', 'position', 'coordinates', 'event_count', 'event_code']"
-f54238ee,"['game_time', 'event_count', 'event_code']"
-6cf7d25c,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-77261ab5,"['game_time', 'version', 'event_count', 'event_code']"
-1af8be29,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-7d093bf9,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-1bb5fbdb,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-d38c2fd7,"['game_time', 'hat', 'source', 'coordinates', 'duration', 'event_count', 'event_code']"
-17113b36,"['game_time', 'correct', 'caterpillars', 'event_count', 'event_code']"
-b5053438,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-250513af,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-b738d3d3,"['game_time', 'round', 'session_duration', 'exit_type', 'event_count', 'event_code']"
-7ad3efc6,"['game_time', 'version', 'event_count', 'event_code']"
-84b0e0c8,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-857f21c0,"['game_time', 'round', 'current_containers', 'total_containers', 'event_count', 'event_code']"
-d51b1749,"['game_time', 'round', 'movie_id', 'duration', 'description', 'event_count', 'event_code']"
-6f445b57,"['game_time', 'round', 'dwell_time', 'object', 'event_count', 'event_code']"
-9d4e7b25,"['game_time', 'crystal_id', 'weight', 'left', 'right', 'coordinates', 'source', 'crystals', 'duration', 'event_count', 'event_code']"
-25fa8af4,"['game_time', 'correct', 'stumps', 'event_count', 'event_code']"
-7ab78247,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-6088b756,"['game_time', 'round', 'duration', 'event_count', 'event_code']"
-4e5fc6f5,"['game_time', 'left', 'right', 'crystals', 'event_count', 'event_code']"
-7ec0c298,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-5a848010,"['game_time', 'round', 'level', 'movie_id', 'duration', 'description', 'event_count', 'event_code']"
-b2dba42b,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-47f43a44,"['game_time', 'flowers', 'event_count', 'event_code']"
-9ce586dd,"['game_time', 'weight', 'source', 'coordinates', 'duration', 'event_count', 'event_code']"
-4d6737eb,"['game_time', 'round', 'duration', 'event_count', 'event_code']"
-3bfd1a65,"['game_time', 'version', 'event_count', 'event_code']"
-3393b68b,"['game_time', 'session_duration', 'event_count', 'event_code']"
-8ac7cce4,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-69fdac0a,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-76babcde,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-1cc7cfca,"['game_time', 'round', 'dinosaur', 'size', 'dinosaurs', 'coordinates', 'event_count', 'event_code']"
-2b058fe3,"['game_time', 'session_duration', 'event_count', 'event_code']"
-5e812b27,"['game_time', 'size', 'coordinates', 'event_count', 'event_code']"
-93b353f2,"['game_time', 'correct', 'pillars', 'event_count', 'event_code']"
-49ed92e9,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-c189aaf2,"['game_time', 'round', 'movie_id', 'duration', 'description', 'event_count', 'event_code']"
-e64e2cfd,"['game_time', 'version', 'event_count', 'event_code']"
-b012cd7f,"['game_time', 'round', 'duration', 'misses', 'event_count', 'event_code']"
-bd701df8,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-e694a35b,"['game_time', 'rocket', 'height', 'duration', 'coordinates', 'launched', 'event_count', 'event_code']"
-85d1b0de,"['game_time', 'layout', 'event_count', 'event_code']"
-d3f1e122,"['game_time', 'round', 'bottle', 'coordinates', 'duration', 'bottles', 'source', 'event_count', 'event_code']"
-29a42aea,"['game_time', 'round', 'dwell_time', 'object', 'event_count', 'event_code']"
-89aace00,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-90d848e0,"['game_time', 'version', 'event_count', 'event_code']"
-8d84fa81,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-6c517a88,"['game_time', 'round', 'coordinates', 'holding_shell', 'has_water', 'event_count', 'event_code']"
-4bb2f698,"['game_time', 'coordinates', 'event_count', 'event_code']"
-f56e0afc,"['game_time', 'version', 'event_count', 'event_code']"
-763fc34e,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-5290eab1,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-51311d7a,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-7dfe6d8a,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-7cf1bc53,"['game_time', 'round', 'target_size', 'resources', 'object_type', 'event_count', 'event_code']"
-9b01374f,"['game_time', 'version', 'event_count', 'event_code']"
-37ee8496,"['game_time', 'bucket', 'buckets', 'coordinates', 'buckets_placed', 'source', 'event_count', 'event_code']"
-c1cac9a2,"['game_time', 'round', 'level', 'movie_id', 'duration', 'description', 'time_played', 'event_count', 'event_code']"
-b7530680,"['game_time', 'round', 'previous_jars', 'event_count', 'event_code']"
-a76029ee,"['game_time', 'hat', 'coordinates', 'hats', 'source', 'duration', 'event_count', 'event_code']"
-00c73085,"['game_time', 'round', 'duration', 'misses', 'event_count', 'event_code']"
-bfc77bd6,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-a1192f43,"['game_time', 'round', 'max_position', 'end_position', 'duration', 'event_count', 'event_code']"
-65abac75,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-63f13dd7,"['game_time', 'round', 'dinosaur', 'diet', 'target_weight', 'resources', 'event_count', 'event_code']"
-3b2048ee,"['game_time', 'round', 'event_count', 'event_code']"
-85de926c,"['game_time', 'round', 'toy', 'coordinates', 'event_count', 'event_code']"
-155f62a4,"['game_time', 'event_count', 'event_code']"
-0086365d,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-13f56524,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-87d743c1,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-c54cf6c5,"['game_time', 'round', 'target_containers', 'event_count', 'event_code']"
-9ee1c98c,"['game_time', 'size', 'sand', 'duration', 'coordinates', 'filled', 'event_count', 'event_code']"
-f50fc6c1,"['game_time', 'cloud', 'cloud_size', 'event_count', 'event_code']"
-d2659ab4,"['game_time', 'round', 'duration', 'tutorial_step', 'event_count', 'event_code']"
-d88ca108,"['game_time', 'round', 'duration', 'event_count', 'event_code']"
-8f094001,"['game_time', 'round', 'target_containers', 'event_count', 'event_code']"
-598f4598,"['game_time', 'coordinates', 'duration', 'event_count', 'event_code']"
-55115cbd,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-90ea0bac,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-8b757ab8,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-3d0b9317,"['game_time', 'weight', 'coordinates', 'left', 'right', 'pillars', 'source', 'duration', 'event_count', 'event_code']"
-e5734469,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-c7fe2a55,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-4a4c3d21,"['game_time', 'height', 'bird_height', 'correct', 'caterpillar', 'caterpillars', 'coordinates', 'duration', 'event_count', 'event_code']"
-30df3273,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-9e34ea74,"['game_time', 'coordinates', 'event_count', 'event_code']"
-c74f40cd,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-e4f1efe6,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-499edb7c,"['game_time', 'side', 'layout', 'coordinates', 'duration', 'source', 'event_count', 'event_code']"
-3323d7e9,"['game_time', 'round', 'duration', 'misses', 'event_count', 'event_code']"
-4ef8cdd3,"['game_time', 'round', 'weight', 'correct', 'scale_weight', 'scale_contents', 'coordinates', 'duration', 'event_count', 'event_code']"
-5f5b2617,"['game_time', 'round', 'dwell_time', 'object', 'event_count', 'event_code']"
-832735e1,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-47efca07,"['game_time', 'round', 'previous_jars', 'bottles', 'jar', 'event_count', 'event_code']"
-2dc29e21,"['game_time', 'round', 'dinosaur', 'house', 'size', 'correct', 'dinosaurs', 'coordinates', 'duration', 'dinosaurs_placed', 'event_count', 'event_code']"
-01ca3a3c,"['game_time', 'round', 'dwell_time', 'object', 'event_count', 'event_code']"
-6077cc36,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-26fd2d99,"['game_time', 'round', 'level', 'round_target', 'options', 'animals', 'event_count', 'event_code']"
-73757a5e,"['game_time', 'round', 'level', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-0d18d96c,"['game_time', 'height', 'source', 'coordinates', 'duration', 'event_count', 'event_code']"
-731c0cbe,"['game_time', 'hats', 'caterpillars', 'mode', 'event_count', 'event_code']"
-fbaf3456,"['game_time', 'height', 'stumps', 'coordinates', 'source', 'event_count', 'event_code']"
-9b23e8ee,"['game_time', 'version', 'event_count', 'event_code']"
-e080a381,"['game_time', 'round', 'scale_weights', 'target_weight', 'table_weights', 'event_count', 'event_code']"
-2a512369,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-7961e599,"['game_time', 'round', 'target_water_level', 'event_count', 'event_code']"
-f806dc10,"['game_time', 'round', 'shells', 'holes', 'event_count', 'event_code']"
-d185d3ea,"['game_time', 'round', 'weight', 'resources', 'coordinates', 'duration', 'event_count', 'event_code']"
-74e5f8a7,"['game_time', 'round', 'shell_size', 'position', 'correct', 'holes', 'coordinates', 'hole_position', 'event_count', 'event_code']"
-6bf9e3e1,"['game_time', 'round', 'source', 'has_toy', 'bowl_id', 'scale_contents', 'position', 'coordinates', 'event_count', 'event_code']"
-92687c59,"['game_time', 'round', 'level', 'round_target', 'options', 'animals', 'event_count', 'event_code']"
-e4d32835,"['game_time', 'round', 'dwell_time', 'object', 'event_count', 'event_code']"
-ab4ec3a4,"['game_time', 'round', 'dwell_time', 'object', 'event_count', 'event_code']"
-5b49460a,"['game_time', 'version', 'event_count', 'event_code']"
-cb6010f8,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-29bdd9ba,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-a2df0760,"['game_time', 'round', 'source', 'has_toy', 'bowl_id', 'scale_contents', 'position', 'coordinates', 'event_count', 'event_code']"
-5154fc30,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-c952eb01,"['game_time', 'coordinates', 'event_count', 'event_code']"
-3ee399c3,"['game_time', 'coordinates', 'event_count', 'event_code']"
-7da34a02,"['game_time', 'coordinates', 'event_count', 'event_code']"
-565a3990,"['game_time', 'coordinates', 'event_count', 'event_code']"
-5e109ec3,"['game_time', 'crystal_id', 'weight', 'coordinates', 'source', 'crystals', 'event_count', 'event_code']"
-9e4c8c7b,"['game_time', 'round', 'media_type', 'duration', 'description', 'identifier', 'event_count', 'event_code']"
-ec138c1c,"['game_time', 'stage_number', 'event_count', 'event_code']"
-262136f4,"['game_time', 'round', 'dinosaur', 'dinosaur_weight', 'correct', 'coordinates', 'mode', 'weight', 'dinosaur_count', 'event_count', 'event_code']"
-9565bea6,"['game_time', 'round', 'session_duration', 'exit_type', 'event_count', 'event_code']"
-90efca10,"['game_time', 'round', 'bottle', 'bottles', 'duration', 'coordinates', 'jar', 'source', 'jar_filled', 'event_count', 'event_code']"
-eb2c19cd,"['game_time', 'stumps', 'mode', 'event_count', 'event_code']"
-fd20ea40,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-c2baf0bd,"['game_time', 'round', 'total_bowls', 'bowls', 'event_count', 'event_code']"
-beb0a7b9,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-e3ff61fb,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-9de5e594,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-d45ed6a1,"['game_time', 'round', 'media_type', 'duration', 'description', 'identifier', 'event_count', 'event_code']"
-a44b10dc,"['game_time', 'coordinates', 'event_count', 'event_code']"
-dcb55a27,"['game_time', 'round', 'distance', 'event_count', 'event_code']"
-ac92046e,"['game_time', 'round', 'level', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-0413e89d,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-02a42007,"['game_time', 'rocket', 'coordinates', 'event_count', 'event_code']"
-804ee27f,"['game_time', 'round', 'weights', 'target_weight', 'correct', 'table_weights', 'duration', 'event_count', 'event_code']"
-7525289a,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-ca11f653,"['game_time', 'round', 'duration', 'misses', 'event_count', 'event_code']"
-1beb320a,"['game_time', 'round', 'target_containers', 'resources', 'container_type', 'event_count', 'event_code']"
-0a08139c,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-895865f3,"['game_time', 'round', 'duration', 'misses', 'toy_earned', 'event_count', 'event_code']"
-070a5291,"['game_time', 'correct', 'hats', 'event_count', 'event_code']"
-ecc36b7f,"['game_time', 'round', 'event_count', 'event_code']"
-daac11b0,"['game_time', 'round', 'media_type', 'total_duration', 'description', 'identifier', 'event_count', 'event_code']"
-392e14df,"['game_time', 'buckets', 'correct', 'buckets_placed', 'duration', 'event_count', 'event_code']"
-acf5c23f,"['game_time', 'coordinates', 'event_count', 'event_code']"
-ad2fc29c,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-b80e5e84,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-5c3d2b2f,"['game_time', 'round', 'level', 'size', 'item_type', 'position', 'animal', 'correct', 'coordinates', 'event_count', 'event_code']"
-5de79a6a,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-4c2ec19f,"['game_time', 'nest', 'layout', 'coordinates', 'event_count', 'event_code']"
-3bb91ced,"['game_time', 'round', 'movie_id', 'duration', 'description', 'time_played', 'event_count', 'event_code']"
-fcfdffb6,"['game_time', 'flower', 'flowers', 'coordinates', 'duration', 'event_count', 'event_code']"
-6f4bd64e,"['game_time', 'round', 'target_distances', 'round_prompt', 'event_count', 'event_code']"
-a8876db3,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-88d4a5be,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-1575e76c,"['game_time', 'round', 'target_distances', 'round_prompt', 'event_count', 'event_code']"
-907a054b,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-e37a2b78,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-f71c4741,"['game_time', 'round', 'level', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-587b5989,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-86c924c4,"['game_time', 'round', 'group', 'position', 'coordinates', 'correct', 'object_type', 'event_count', 'event_code']"
-56cd3b43,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-a16a373e,"['game_time', 'coordinates', 'event_count', 'event_code']"
-9d29771f,"['game_time', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-a0faea5d,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-17ca3959,"['game_time', 'round', 'session_duration', 'exit_type', 'event_count', 'event_code']"
-46cd75b4,"['game_time', 'side', 'layout', 'coordinates', 'duration', 'source', 'event_count', 'event_code']"
-de26c3a6,"['game_time', 'growth', 'flowers', 'duration', 'event_count', 'event_code']"
-08ff79ad,"['game_time', 'layout', 'event_count', 'event_code']"
-b88f38da,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-828e68f9,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-9ed8f6da,"['game_time', 'round', 'duration', 'tutorial_step', 'event_count', 'event_code']"
-ad148f58,"['game_time', 'round', 'toy', 'coordinates', 'event_count', 'event_code']"
-31973d56,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-1f19558b,"['game_time', 'round', 'media_type', 'duration', 'description', 'identifier', 'event_count', 'event_code']"
-15ba1109,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-58a0de5c,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-f93fc684,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-f28c589a,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-5d042115,"['game_time', 'flowers', 'flower', 'coordinates', 'event_count', 'event_code']"
-44cb4907,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-36fa3ebe,"['game_time', 'round', 'duration', 'misses', 'event_count', 'event_code']"
-d9c005dd,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-0330ab6a,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-db02c830,"['game_time', 'event_count', 'event_code']"
-2ec694de,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-3a4be871,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-51102b85,"['game_time', 'hat', 'caterpillar', 'coordinates', 'hats', 'caterpillars', 'source', 'event_count', 'event_code']"
-cb1178ad,"['game_time', 'pillars', 'left', 'right', 'chests', 'event_count', 'event_code']"
-dcb1663e,"['game_time', 'round', 'dwell_time', 'object', 'event_count', 'event_code']"
-37db1c2f,"['game_time', 'round', 'has_toy', 'bowl_id', 'scale_contents', 'position', 'coordinates', 'event_count', 'event_code']"
-c7128948,"['game_time', 'height', 'coordinates', 'stumps', 'source', 'duration', 'event_count', 'event_code']"
-15eb4a7d,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-1c178d24,"['game_time', 'round', 'duration', 'misses', 'event_count', 'event_code']"
-562cec5f,"['game_time', 'weight', 'destination', 'pillars', 'left', 'right', 'coordinates', 'source', 'duration', 'event_count', 'event_code']"
-48349b14,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-a5be6304,"['game_time', 'session_duration', 'exit_type', 'event_count', 'event_code']"
-cfbd47c8,"['game_time', 'round', 'weight', 'source', 'resources', 'coordinates', 'event_count', 'event_code']"
-cc5087a3,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-3ccd3f02,"['game_time', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-3edf6747,"['game_time', 'bucket', 'source', 'coordinates', 'duration', 'event_count', 'event_code']"
-cf82af56,"['game_time', 'round', 'level', 'coordinates', 'event_count', 'event_code']"
-1996c610,"['game_time', 'round', 'shell_size', 'event_count', 'event_code']"
-3bf1cf26,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-f6947f54,"['game_time', 'duration', 'misses', 'stage_number', 'event_count', 'event_code']"
-022b4259,"['game_time', 'buglength', 'bug', 'duration', 'coordinates', 'event_count', 'event_code']"
-a1bbe385,"['game_time', 'round', 'description', 'identifier', 'media_type', 'duration', 'event_count', 'event_code']"
-222660ff,"['game_time', 'session_duration', 'event_count', 'event_code']"
-756e5507,"['game_time', 'version', 'event_count', 'event_code']"
-27253bdc,"['event_count', 'event_code']"
-0ce40006,"['game_time', 'round', 'dwell_time', 'object', 'event_count', 'event_code']"
-1340b8d7,"['game_time', 'round', 'object', 'coordinates', 'event_count', 'event_code']"
-bb3e370b,"['game_time', 'round', 'bottle', 'bottles', 'coordinates', 'source', 'event_count', 'event_code']"
-4074bac2,"['game_time', 'round', 'session_duration', 'exit_type', 'event_count', 'event_code']"
-67aa2ada,"['game_time', 'round', 'weight', 'dinosaur_count', 'target_weight', 'event_count', 'event_code']"
-884228c8,"['game_time', 'coordinates', 'event_count', 'event_code']"
-e7561dd2,"['game_time', 'round', 'scale_weights', 'target_weight', 'correct', 'table_weights', 'duration', 'event_count', 'event_code']"
-46b50ba8,"['game_time', 'round', 'event_count', 'event_code']"
-a6d66e51,"['game_time', 'water_level', 'event_count', 'event_code']"
-e79f3763,"['game_time', 'bug', 'source', 'coordinates', 'event_count', 'event_code']"
-b2e5b0f1,"['game_time', 'session_duration', 'event_count', 'event_code']"
-d06f75b5,"['game_time', 'round', 'duration', 'event_count', 'event_code']"
-d2e9262e,"['game_time', 'cloud', 'cloud_size', 'water_level', 'event_count', 'event_code']"
-8d7e386c,"['game_time', 'round', 'description', 'identifier', 'media_type', 'total_duration', 'event_count', 'event_code']"
-4a09ace1,"['game_time', 'round', 'level', 'movie_id', 'duration', 'description', 'event_count', 'event_code']"
-2fb91ec1,"['game_time', 'cloud', 'cloud_size', 'water_level', 'coordinates', 'filled', 'event_count', 'event_code']"
-611485c5,"['game_time', 'dwell_time', 'object', 'event_count', 'event_code']"
-16dffff1,"['game_time', 'round', 'duration', 'misses', 'event_count', 'event_code']"
-28ed704e,"['game_time', 'height', 'coordinates', 'event_count', 'event_code']"
-19967db1,"['game_time', 'round', 'resources', 'scale_contents', 'event_count', 'event_code']"
-4901243f,"['game_time', 'version', 'event_count', 'event_code']"
-e7e44842,"['game_time', 'water_level', 'event_count', 'event_code']"
-a592d54e,"['game_time', 'round', 'target_weight', 'table_weights', 'starting_weights', 'event_count', 'event_code']"
-003cd2ee,"['game_time', 'round', 'session_duration', 'exit_type', 'event_count', 'event_code']"
-f32856e4,"['game_time', 'round', 'target_weight', 'event_count', 'event_code']"
-83c6c409,"['game_time', 'duration', 'event_count', 'event_code']"
-6d90d394,"['game_time', 'round', 'level', 'version', 'event_count', 'event_code']"
-8d748b58,"['game_time', 'tape_length', 'bug', 'bug_length', 'event_count', 'event_code']"
-5be391b5,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-38074c54,"['game_time', 'duration', 'misses', 'event_count', 'event_code']"
-c6971acf,"['game_time', 'round', 'event_count', 'event_code']"
-5e3ea25a,"['game_time', 'round', 'coordinates', 'event_count', 'event_code']"
-7d5c30a2,"['game_time', 'round', 'event_count', 'event_code']"
-d2278a3b,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-99ea62f3,"['game_time', 'round', 'movie_id', 'duration', 'description', 'event_count', 'event_code']"
-9c5ef70c,"['game_time', 'round', 'version', 'event_count', 'event_code']"
-7040c096,"['game_time', 'round', 'level', 'coordinates', 'event_count', 'event_code']"
-29f54413,"['game_time', 'round', 'event_count', 'event_code']"
-06372577,"['game_time', 'round', 'event_count', 'event_code']"
-2a444e03,"['game_time', 'round', 'location', 'scale_weights', 'table_weights', 'event_count', 'event_code']"
-9e6b7fb5,"['game_time', 'round', 'event_count', 'event_code']"
-d3640339,"['game_time', 'round', 'target_water_level', 'water_level', 'event_count', 'event_code']"
+event_id,event_type,event_action
+392e14df,game,end
+17113b36,game,end
+070a5291,game,end
+93b353f2,game,end
+d122731b,game,end
+25fa8af4,game,end
+37c53127,game,end
+77c76bc5,game,help
+37937459,game,help
+ecc6157f,game,help
+7fd1ac25,game,help
+9554a50b,game,help
+16667cc5,game,help
+bfc77bd6,game,help
+13f56524,game,help
+30df3273,game,help
+6077cc36,game,help
+2ec694de,game,help
+3a4be871,game,help
+611485c5,game,help
+f54238ee,game,help
+47f43a44,game,help
+731c0cbe,game,help
+08ff79ad,game,help
+85d1b0de,game,help
+4e5fc6f5,game,help
+cb1178ad,game,help
+6043a2b4,game,help
+119b5b02,game,help
+6f445b57,game,help
+01ca3a3c,game,help
+e4d32835,game,help
+ab4ec3a4,game,help
+0ce40006,game,help
+26a5a3dd,game,help
+29a42aea,game,help
+5f5b2617,game,help
+dcb1663e,game,help
+92687c59,game,help
+5dc079d8,game,help
+47efca07,game,help
+19967db1,game,help
+05ad839b,game,help
+e080a381,game,help
+6f8106d9,game,help
+6aeafed4,game,help
+6f4bd64e,game,help
+93edfe2e,game,help
+d3640339,game,help
+67aa2ada,game,help
+eb2c19cd,game,help
+8d748b58,game,help
+e7e44842,game,help
+3edf6747,game,mistake
+1325467d,game,mistake
+3ee399c3,game,mistake
+bd612267,game,mistake
+4bb2f698,game,mistake
+9e34ea74,game,mistake
+c952eb01,game,mistake
+7da34a02,game,mistake
+565a3990,game,mistake
+a44b10dc,game,mistake
+acf5c23f,game,mistake
+884228c8,game,mistake
+a16a373e,game,mistake
+3d63345e,game,mistake
+d38c2fd7,game,mistake
+0d18d96c,game,mistake
+cdd22e43,game,mistake
+d3f1e122,game,mistake
+587b5989,game,mistake
+a7640a16,game,mistake
+f3cd5473,game,mistake
+7372e1a5,game,mistake
+7dfe6d8a,game,mistake
+a0faea5d,game,mistake
+5e3ea25a,game,mistake
+76babcde,game,mistake
+6c517a88,game,mistake
+bcceccc6,game,mistake
+15a43e5b,game,mistake
+d02b7a8e,game,mistake
+cf82af56,game,mistake
+a2df0760,game,mistake
+d185d3ea,game,mistake
+c58186bf,game,mistake
+363c86c9,game,mistake
+9ce586dd,game,mistake
+17ca3959,game,quit
+4074bac2,game,quit
+003cd2ee,game,quit
+9565bea6,game,quit
+3393b68b,game,quit
+2b058fe3,game,quit
+222660ff,game,quit
+b2e5b0f1,game,quit
+a8cc6fec,game,quit
+1b54d27f,game,quit
+a5be6304,game,quit
+b738d3d3,game,quit
+ecc36b7f,game,replay
+b1d5101d,game,replay
+3b2048ee,game,replay
+46b50ba8,game,replay
+9e6b7fb5,game,replay
+4b5efe37,game,start
+abc5811c,game,start
+8d84fa81,game,start
+65abac75,game,start
+0086365d,game,start
+87d743c1,game,start
+fd20ea40,game,start
+f93fc684,game,start
+cc5087a3,game,start
+5be391b5,game,start
+6d90d394,game,start
+7040c096,game,start
+dcaede90,game,start
+b7dc8128,game,start
+15ba1109,game,start
+7d093bf9,game,start
+8ac7cce4,game,start
+51311d7a,game,start
+29bdd9ba,game,start
+d9c005dd,game,start
+9c5ef70c,game,start
+1cf54632,game,start
+48349b14,game,start
+d2278a3b,game,start
+c7f7f0e1,game,start
+77261ab5,game,start
+7ad3efc6,game,start
+3bfd1a65,game,start
+e64e2cfd,game,start
+90d848e0,game,start
+f56e0afc,game,start
+9b01374f,game,start
+9b23e8ee,game,start
+5b49460a,game,start
+756e5507,game,start
+4901243f,game,start
+4a09ace1,movie,end
+c189aaf2,movie,end
+99ea62f3,movie,end
+c1cac9a2,movie,skip
+3bb91ced,movie,skip
+27253bdc,movie,start
+5a848010,movie,start
+99abe2bb,movie,start
+d51b1749,movie,start
+91561152,round,action
+37ee8496,round,action
+5348fd84,round,action
+30614231,round,action
+e79f3763,round,action
+022b4259,round,action
+2fb91ec1,round,action
+f50fc6c1,round,action
+d2e9262e,round,action
+598f4598,round,action
+5e109ec3,round,action
+5c2f29ca,round,action
+9d4e7b25,round,action
+fcfdffb6,round,action
+5d042115,round,action
+461eace6,round,action
+de26c3a6,round,action
+8fee50e2,round,action
+51102b85,round,action
+a76029ee,round,action
+4a4c3d21,round,action
+fbaf3456,round,action
+c7128948,round,action
+28ed704e,round,action
+5f0eb72c,round,action
+4c2ec19f,round,action
+56bcd38d,round,action
+02a42007,round,action
+e694a35b,round,action
+bb3e370b,round,action
+90efca10,round,action
+3bb91dda,round,action
+bc8f2793,round,action
+857f21c0,round,action
+262136f4,round,action
+1cc7cfca,round,action
+2dc29e21,round,action
+28f975ea,round,action
+14de4c5d,round,action
+86c924c4,round,action
+37db1c2f,round,action
+5c3d2b2f,round,action
+2a444e03,round,action
+a1192f43,round,action
+1340b8d7,round,action
+a5e9da97,round,action
+e7561dd2,round,action
+74e5f8a7,round,action
+792530f8,round,action
+1996c610,round,action
+c0415e5c,round,action
+3d8c61b0,round,action
+6bf9e3e1,round,action
+8af75982,round,action
+8f094001,round,action
+ad148f58,round,action
+85de926c,round,action
+cfbd47c8,round,action
+4ef8cdd3,round,action
+804ee27f,round,action
+499edb7c,round,action
+46cd75b4,round,action
+5e812b27,round,action
+9ee1c98c,round,action
+84538528,round,action
+a8efe47b,round,action
+3d0b9317,round,action
+0db6d71d,round,action
+562cec5f,round,action
+ecaab346,round,end
+b5053438,round,end
+c74f40cd,round,end
+e4f1efe6,round,end
+7525289a,round,end
+45d01abe,round,end
+d3268efa,round,end
+3afb49e6,round,end
+a8876db3,round,end
+9d29771f,round,end
+83c6c409,round,end
+38074c54,round,end
+6c930e6e,round,end
+b74258a0,round,end
+f6947f54,round,end
+71e712d8,round,end
+28520915,round,end
+e720d930,round,end
+709b1251,round,end
+4d911100,round,end
+cf7638f3,round,end
+e5c9df6f,round,end
+a8a78786,round,end
+55115cbd,round,end
+cb6010f8,round,end
+58a0de5c,round,end
+47026d5f,round,end
+3afde5dd,round,end
+3ddc79c3,round,end
+6f4adc4b,round,end
+77ead60d,round,end
+9b4001e4,round,end
+250513af,round,end
+c7fe2a55,round,end
+e3ff61fb,round,end
+ca11f653,round,end
+d06f75b5,round,end
+2b9272f4,round,end
+73757a5e,round,end
+1f19558b,round,end
+daac11b0,round,end
+3323d7e9,round,end
+56817e2b,round,end
+b012cd7f,round,end
+00c73085,round,end
+36fa3ebe,round,end
+1c178d24,round,end
+16dffff1,round,end
+f5b8c21a,round,end
+895865f3,round,end
+08fd73f3,round,end
+e9c52111,round,end
+df4fe8b6,round,replay
+5290eab1,round,replay
+88d4a5be,round,replay
+e37a2b78,round,replay
+31973d56,round,replay
+160654fd,round,replay
+ea296733,round,replay
+04df9b66,round,replay
+ad2fc29c,round,replay
+5de79a6a,round,replay
+5859dfb6,round,replay
+e04fb33d,round,replay
+28a4eb9a,round,replay
+e57dd7af,round,replay
+2230fab4,round,replay
+c51d8688,round,replay
+89aace00,round,replay
+8b757ab8,round,replay
+3bf1cf26,round,replay
+7423acbc,round,replay
+1af8be29,round,replay
+763fc34e,round,replay
+90ea0bac,round,replay
+e5734469,round,replay
+9de5e594,round,replay
+907a054b,round,replay
+44cb4907,round,replay
+0330ab6a,round,replay
+b120f2ac,round,replay
+ac92046e,round,replay
+d88e8f25,round,replay
+d45ed6a1,round,replay
+c277e121,round,replay
+532a2afb,round,start
+65a38bf7,round,start
+db02c830,round,start
+155f62a4,round,start
+3dfd4aa4,round,start
+736f9581,round,start
+c54cf6c5,round,start
+63f13dd7,round,start
+2c4e6db0,round,start
+26fd2d99,round,start
+b7530680,round,start
+f806dc10,round,start
+1beb320a,round,start
+1575e76c,round,start
+7cf1bc53,round,start
+7961e599,round,start
+f32856e4,round,start
+a592d54e,round,start
+c2baf0bd,round,start
+ec138c1c,round,start
+a6d66e51,round,start
+bbfe0445,rules,end
+71fe8f75,rules,end
+2dcad279,rules,end
+bdf49a58,rules,end
+a52b92d5,rules,end
+1bb5fbdb,rules,end
+84b0e0c8,rules,end
+bd701df8,rules,end
+b80e5e84,rules,end
+b88f38da,rules,end
+828e68f9,rules,end
+3ccd3f02,rules,end
+3babcb9b,rules,end
+7f0836bf,rules,end
+ab3136ba,rules,end
+15f99afc,rules,end
+0d1da71f,rules,end
+df4940d3,rules,end
+69fdac0a,rules,end
+2a512369,rules,end
+15eb4a7d,rules,end
+a1bbe385,rules,end
+f7e47413,rules,end
+9e4c8c7b,rules,end
+795e4a37,rules,start
+a1e4395d,rules,start
+1375ccb7,rules,start
+923afab1,rules,start
+ea321fb1,rules,start
+3dcdda7f,rules,start
+7ab78247,rules,start
+b2dba42b,rules,start
+49ed92e9,rules,start
+beb0a7b9,rules,start
+0a08139c,rules,start
+56cd3b43,rules,start
+33505eae,rules,start
+67439901,rules,start
+a29c5338,rules,start
+6cf7d25c,rules,start
+7ec0c298,rules,start
+8.33E+06,rules,start
+5154fc30,rules,start
+0413e89d,rules,start
+f28c589a,rules,start
+8d7e386c,rules,start
+f71c4741,rules,start
+363d3849,rules,start
+dcb55a27,tutorial,end
+86ba578b,tutorial,end
+4d6737eb,tutorial,end
+6088b756,tutorial,end
+d88ca108,tutorial,end
+53c6e11a,tutorial,skip
+9ed8f6da,tutorial,skip
+d2659ab4,tutorial,skip
+c6971acf,tutorial,start
+29f54413,tutorial,start
+7d5c30a2,tutorial,start
+6372577,tutorial,start

@@ -2,6 +2,12 @@ import numpy as np
 import pandas as pd
 import os
 import random
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from keras.models import Sequential
+from keras.layers import Dense, Activation
 
 def clean_data(df,specs):
     # too many columns, we'll try it without these
@@ -23,21 +29,23 @@ def clean_data(df,specs):
 
 def consolidate_features(dataframe):
     cols=['game_session','installation_id','world','accuracy_group','total_time',
-          'action_time','help_time','movie_time',
-          'mistake_time','rules_time','tutor_time',
+          'game_action_time','round_action_time','help_time','movie_time',
+          'game_mistake_time','round_mistake_time','rules_time','tutor_time',
           'num_quit','num_skips','num_replays','num_ends','num_rounds']
 
-    sums = [('action_time', 6, 2),
+    sums = [('game_action_time', 6, 1),
+            ('round_action_time', 6, 2),
             ('help_time', 3, 2),
             ('movie_time', 5, 0),
-            ('mistake_time', 2, 2),
+            ('game_mistake_time', 2, 1),
+            ('round_mistake_time', 2, 2),
             ('rules_time', 5, 3),
             ('tutor_time', 5, 4)]
 
-    nums = [('num_quit', 0, 2),
+    nums = [('num_quit', 0, 1),
             ('num_skips', 1, 4),
-            ('num_replays', 4, 2),
-            ('num_ends', 7, 2),
+            ('num_replays', 4, 1),
+            ('num_ends', 7, 1),
             ('num_rounds', 5, 2)]
    
     features = pd.DataFrame(columns=cols)
@@ -77,9 +85,7 @@ def consolidate_features(dataframe):
 
 # Import training data
 train_labels = pd.read_csv("train_labels.csv")
-specs = pd.read_csv("specs_simple.csv")
-specs[specs['event_type']==1]['event_type']=2
-
+specs = pd.read_csv("specs_cleaned.csv")
 train = pd.read_csv("train.csv")
 # filter out entries that didn't complete any assessments
 train = train[train.installation_id.isin(train_labels['installation_id'])]   
@@ -115,46 +121,54 @@ print(X_test.shape,Y_test.shape)
 
 # try some models
 logistic = LogisticRegression(solver='liblinear', multi_class='auto').fit(X_train, Y_train)
-print(logistic.predict(X_test))
-logistic.score(X_test, Y_test)
+print("Logistic, liblinear")
+print(logistic.score(X_test, Y_test))
 
 logistic = LogisticRegression(solver='lbfgs', multi_class='auto').fit(X_train, Y_train)
-print(logistic.predict(X_test))
-logistic.score(X_test, Y_test)
+print("Logistic, lbfgs")
+print(logistic.score(X_test, Y_test))
 
 knn = KNeighborsClassifier(n_neighbors=5)
 knn.fit(X_train, Y_train)
-print(knn.predict(X_test))
+print("KNN, n_neighbors=5")
 print(knn.score(X_test, Y_test))
 
 knn = KNeighborsClassifier(n_neighbors=20)
 knn.fit(X_train, Y_train)
-print(knn.predict(X_test))
+print("KNN, n_neighbors=20")
 print(knn.score(X_test, Y_test))
 
 knn = KNeighborsClassifier(n_neighbors=50)
 knn.fit(X_train, Y_train)
-print(knn.predict(X_test))
+print("KNN, n_neighbors=50")
 print(knn.score(X_test, Y_test))
 
 knn = KNeighborsClassifier(n_neighbors=100)
 knn.fit(X_train, Y_train)
-print(knn.predict(X_test))
+print("KNN, n_neighbors=100")
 print(knn.score(X_test, Y_test))
 
+nn = Sequential()
+nn.add(Dense(output_dim=64, input_dim=X_test.shape[1]))
+nn.add(Activation("relu"))
+nn.add(Dense(output_dim=4))
+nn.add(Activation("softmax"))
+nn.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
+nn.fit(X_train, Y_train, nb_epoch=5, batch_size=32)
+print("NNet, relu, softmax")
+print(model.evaluate(X_test, Y_test, batch_size=32))
 
 svm = SVC(kernel='rbf', decision_function_shape='ovr', gamma='auto')
 svm.fit(X_train, Y_train)
-print(svm.predict(X_test))
+print("SVM, kernel = rbf")
 svm.score(X_test, Y_test)
 
 svm = SVC(kernel='poly', decision_function_shape='ovr', degree=10, gamma='scale')
 svm.fit(X_train, Y_train)
-print(svm.predict(X_test))
+print("SVM, kernel = poly")
 print(svm.score(X_test, Y_test))
-
 
 svm = SVC(kernel='sigmoid', decision_function_shape='ovr', gamma='scale')
 svm.fit(X_train, Y_train)
-print(svm.predict(X_test))
+print("SVM, kernel = sigmoid")
 print(svm.score(X_test, Y_test))

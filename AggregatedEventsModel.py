@@ -76,11 +76,11 @@ def consolidate_features(dataframe):
 
 
 # Import training data
-train_labels = pd.read_csv("/kaggle/input/data-science-bowl-2019/train_labels.csv")
-specs = pd.read_csv("../input/mystuff/specs_simple.csv")
+train_labels = pd.read_csv("train_labels.csv")
+specs = pd.read_csv("specs_simple.csv")
 specs[specs['event_type']==1]['event_type']=2
 
-train = pd.read_csv("/kaggle/input/data-science-bowl-2019/train.csv")
+train = pd.read_csv("train.csv")
 # filter out entries that didn't complete any assessments
 train = train[train.installation_id.isin(train_labels['installation_id'])]   
 # attach our labels while we process so we don't lose them
@@ -94,9 +94,7 @@ result = clean_data(result,specs)
 # filter out failed attempts at assessments - that's what we're trying to predict...
 result = result[~result.event_code.isin((4100,4110))]
 
-
-
-# aggregate features from game sessions
+# aggregate features from data
 features = consolidate_features(result)
 
 # during testing, we discovered that half the results are in accuracy_group=3. This throws off the training, so we'll even out our training set.
@@ -104,117 +102,59 @@ three = features[features.accuracy_group==3.0]
 msk = np.random.rand(len(three)) < 0.65
 three = three[msk]
 df = features.drop(three.index, errors='ignore', axis=0)
+df = pd.get_dummies(df, columns=['world'])
 
-#separate out the labels again
-labels = df['accuracy_group']
-df = df.drop(['game_session','installation_id','accuracy_group'],axis=1)
 
-#split up into training and testing data
-msk = np.random.rand(len(df)) < 0.8
-train_d = df[msk].values
-train_l = labels[msk].values
-test_d = df[~msk].values
-test_l = labels[~msk].values
+# Split into testing and training data
+Y = df['accuracy_group']
+X = df.drop(['accuracy_group','game_session','installation_id'], axis=1)
 
-training_data = list(zip(train_d, train_l))
-testing_data = list(zip(test_d, test_l))
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.15, random_state = 1)
+print(X_train.shape,Y_train.shape)
+print(X_test.shape,Y_test.shape)
 
-layer1 = train_d.shape[1]
+# try some models
+logistic = LogisticRegression(solver='liblinear', multi_class='auto').fit(X_train, Y_train)
+print(logistic.predict(X_test))
+logistic.score(X_test, Y_test)
 
-#organize data for net
-train_d = data[msk].values
-train_l = labels[msk].values
-test_d = data[~msk].values
-test_l = labels[~msk].values
+logistic = LogisticRegression(solver='lbfgs', multi_class='auto').fit(X_train, Y_train)
+print(logistic.predict(X_test))
+logistic.score(X_test, Y_test)
 
-training_data = list(zip(train_d, train_l))
-testing_data = list(zip(test_d, test_l))
+knn = KNeighborsClassifier(n_neighbors=5)
+knn.fit(X_train, Y_train)
+print(knn.predict(X_test))
+print(knn.score(X_test, Y_test))
 
-layer1 = train_d.shape[1]
+knn = KNeighborsClassifier(n_neighbors=20)
+knn.fit(X_train, Y_train)
+print(knn.predict(X_test))
+print(knn.score(X_test, Y_test))
 
-# clean and re-specify the test data the same way
-test = pd.read_csv("test.csv")
-test = clean_data(test,specs)
-test_features=consolidate_features(test)
-keep=features[['installation_id','world']]
-df = test_features.drop(['installation_id','world'],axis=1)
+knn = KNeighborsClassifier(n_neighbors=50)
+knn.fit(X_train, Y_train)
+print(knn.predict(X_test))
+print(knn.score(X_test, Y_test))
 
----------------------------------------------------------------------------
+knn = KNeighborsClassifier(n_neighbors=100)
+knn.fit(X_train, Y_train)
+print(knn.predict(X_test))
+print(knn.score(X_test, Y_test))
 
-class Network(object):
-    def __init__(self,trial,layer1,layer2,layer3):
-        self.header = f'{trial},{layer1},{layer2},{layer3},'
-        sizes = [layer1,layer2,layer3]
-        self.num_layers = len(sizes)
-        self.sizes = sizes
-        self.biases = [np.random.randn(y,1) for y in sizes[1:]]
-        self.weights = [np.random.randn(y,x) for x,y in zip(sizes[:-1],sizes[1:])]
 
-    def feedforward(self,a):
-        for b,w in zip(self.biases,self.weights):
-            a = sigmoid(np.dot(w,a) + b)        
-        return a
-        
-    def SGD(self, training_data, epochs, mini_batch_size, eta, test_data):
-        n = len(training_data)
-        n_test = len(test_data)
-        self.header += f'{epochs},{mini_batch_size},{eta},'
-        for j in range(epochs):
-            random.shuffle(training_data)
-            mini_batches = [ training_data[k:k + mini_batch_size] for k in range(0, n, mini_batch_size)]
-            for mini_batch in mini_batches:
-                self.update_mini_batch(mini_batch,eta)
-            test = self.evaluate(test_data)/n_test
-            print(self.header + f'{j+1},{test}')
-            
-    def update_mini_batch(self,mini_batch,eta):
-        nabla_b = [np.zeros(b.shape) for b in self.biases]
-        nabla_w = [np.zeros(w.shape) for w in self.weights]
-        for x, y in mini_batch:
-            delta_nabla_b, delta_nabla_w = self.backprop(x, y)
-            nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
-            nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
-        self.weights = [w-(eta/len(mini_batch))*nw for w, nw in zip(self.weights, nabla_w)]
-        self.biases = [b-(eta/len(mini_batch))*nb for b, nb in zip(self.biases, nabla_b)]
-    
-    def backprop(self, x, y):
-        nabla_b = [np.zeros(b.shape) for b in self.biases]
-        nabla_w = [np.zeros(w.shape) for w in self.weights]
-        activation = x
-        activations = [x]
-        zs = []
-        for b, w in zip(self.biases, self.weights):
-            z = np.dot(w, activation)+b
-            zs.append(z)
-            activation = sigmoid(z)
-            activations.append(activation)
-        delta = self.cost_derivative(activations[-1], y) * \
-            sigmoid_prime(zs[-1])
-        nabla_b[-1] = delta
-        nabla_w[-1] = np.dot(delta, activations[-2].transpose())
-        for l in range(2, self.num_layers):
-            z = zs[-l]
-            sp = sigmoid_prime(z)
-            delta = np.dot(self.weights[-l+1].transpose(), delta) * sp
-            nabla_b[-l] = delta
-            nabla_w[-l] = np.dot(delta, activations[-l-1].transpose())
-        return (nabla_b, nabla_w)
+svm = SVC(kernel='rbf', decision_function_shape='ovr', gamma='auto')
+svm.fit(X_train, Y_train)
+print(svm.predict(X_test))
+svm.score(X_test, Y_test)
 
-    def evaluate(self, test_data):
-        test_results = [(np.argmax(self.feedforward(x)), y) for (x, y) in test_data]
-        return sum(int(x == y) for (x, y) in test_results)
+svm = SVC(kernel='poly', decision_function_shape='ovr', degree=10, gamma='scale')
+svm.fit(X_train, Y_train)
+print(svm.predict(X_test))
+print(svm.score(X_test, Y_test))
 
-    def cost_derivative(self, output_activations, y):
-        return (output_activations-y)
-        
-    def sigmoid(z):
-        return 1.0/(1.0+np.exp(-z))
 
-    def sigmoid_prime(z):
-        return sigmoid(z)*(1-sigmoid(z))
-
-def trial(t,layer1,ep,batch,eta):
-    net = Network(t,layer1,layer1,4)
-    net.SGD(training_data, epochs=ep, mini_batch_size=batch, eta=eta, test_data=testing_data)
-    
-
+svm = SVC(kernel='sigmoid', decision_function_shape='ovr', gamma='scale')
+svm.fit(X_train, Y_train)
+print(svm.predict(X_test))
+print(svm.score(X_test, Y_test))

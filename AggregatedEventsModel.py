@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import VotingClassifier
+from sklearn.ensemble import RandomForestClassifier
 from keras.models import Sequential
 from keras.layers import Dense, Activation
 
@@ -100,6 +102,8 @@ result = clean_data(result,specs)
 # filter out failed attempts at assessments - that's what we're trying to predict...
 result = result[~result.event_code.isin((4100,4110))]
 
+
+
 # aggregate features from data
 features = consolidate_features(result)
 
@@ -119,56 +123,78 @@ X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.15, rando
 print(X_train.shape,Y_train.shape)
 print(X_test.shape,Y_test.shape)
 
+# normalize
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.transform(X_test)
+
+# clean and re-specify the prediction data the same way
+test = pd.read_csv("../input/data-science-bowl-2019/test.csv")
+test = clean_data(test,specs)
+test['accuracy_group'] = 0
+pred_data = consolidate_features(test)
+result = pred_data[['installation_id']]
+pred_data = pd.get_dummies(pred_data, columns=['world'])
+pred_data = pred_data.drop(['accuracy_group','game_session','installation_id'], axis=1)
+pred_data = sc.transform(pred_data)
+
+
 # try some models
-logistic = LogisticRegression(solver='liblinear', multi_class='auto').fit(X_train, Y_train)
+log1 = LogisticRegression(solver='liblinear', multi_class='auto')
+log1.fit(X_train, Y_train)
 print("Logistic, liblinear")
-print(logistic.score(X_test, Y_test))
+print(log1.score(X_test, Y_test))
+result['accuracy_group'] = log1.predict(pred_data)
+result.to_csv('log1_submission.csv')
 
-logistic = LogisticRegression(solver='lbfgs', multi_class='auto').fit(X_train, Y_train)
+log2 = LogisticRegression(solver='lbfgs', multi_class='auto')
+log2.fit(X_train, Y_train)
 print("Logistic, lbfgs")
-print(logistic.score(X_test, Y_test))
+print(log2.score(X_test, Y_test))
+result['accuracy_group'] = log2.predict(pred_data)
+result.to_csv('log2_submission.csv')
 
-knn = KNeighborsClassifier(n_neighbors=5)
+knn = KNeighborsClassifier(n_neighbors=150)
 knn.fit(X_train, Y_train)
-print("KNN, n_neighbors=5")
+print("KNN, n_neighbors=150")
 print(knn.score(X_test, Y_test))
+result['accuracy_group'] = knn.predict(pred_data)
+result.to_csv('knn_submission.csv')
 
-knn = KNeighborsClassifier(n_neighbors=20)
-knn.fit(X_train, Y_train)
-print("KNN, n_neighbors=20")
-print(knn.score(X_test, Y_test))
+tree = RandomForestClassifier(n_estimators=50)
+tree.fit(X_train, Y_train)
+print ("Random Forest, 50 trees")
+print (tree.score (X_test, Y_test))
+result['accuracy_group'] = tree.predict(pred_data)
+result.to_csv('tree_submission.csv')
 
-knn = KNeighborsClassifier(n_neighbors=50)
-knn.fit(X_train, Y_train)
-print("KNN, n_neighbors=50")
-print(knn.score(X_test, Y_test))
 
-knn = KNeighborsClassifier(n_neighbors=100)
-knn.fit(X_train, Y_train)
-print("KNN, n_neighbors=100")
-print(knn.score(X_test, Y_test))
+estimators = []
+estimators.append(('log1', log1))
+estimators.append(('log2', log2))
+estimators.append(('tree', tree))
+estimators.append(('knn', knn))
+
+vote = VotingClassifier(estimators)
+vote.fit(X_train, Y_train)
+print("Voting: 2 logistics, KNN, and Forest")
+print(ensemble.score(X_test,Y_test))
+result['accuracy_group'] = vote.predict(pred_data)
+result.to_csv('vote_submission.csv')
+      
 
 nn = Sequential()
-nn.add(Dense(output_dim=64, input_dim=X_test.shape[1]))
+nn.add(Dense(units=30, input_shape=(17,)))
 nn.add(Activation("relu"))
-nn.add(Dense(output_dim=4))
+nn.add(Dense(units=30))
+nn.add(Activation("relu"))
+nn.add(Dense(units=4))
 nn.add(Activation("softmax"))
-nn.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
-nn.fit(X_train, Y_train, nb_epoch=5, batch_size=32)
+nn.compile(loss='sparse_categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
+nn.fit(X_train, Y_train, epochs=5)
 print("NNet, relu, softmax")
-print(model.evaluate(X_test, Y_test, batch_size=32))
+print(nn.evaluate(X_test, Y_test))
+result['accuracy_group'] = nn.predict(pred_data)
+result.to_csv('nn_submission.csv')
 
-svm = SVC(kernel='rbf', decision_function_shape='ovr', gamma='auto')
-svm.fit(X_train, Y_train)
-print("SVM, kernel = rbf")
-svm.score(X_test, Y_test)
 
-svm = SVC(kernel='poly', decision_function_shape='ovr', degree=10, gamma='scale')
-svm.fit(X_train, Y_train)
-print("SVM, kernel = poly")
-print(svm.score(X_test, Y_test))
-
-svm = SVC(kernel='sigmoid', decision_function_shape='ovr', gamma='scale')
-svm.fit(X_train, Y_train)
-print("SVM, kernel = sigmoid")
-print(svm.score(X_test, Y_test))
